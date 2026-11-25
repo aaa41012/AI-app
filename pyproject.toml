@@ -1,0 +1,24 @@
+[project]
+name = "ai-app-engineer"
+version = "0.1.0"
+description = "前端 → AI 應用工程師 學習路線"
+requires-python = ">=3.12"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "pytest>=8",
+    "ruff>=0.8",
+]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+# E/F：基本錯誤　I：import 排序　UP：用新版語法　B：常見 bug（例如可變預設參數）
+select = ["E", "F", "I", "UP", "B"]
+ignore = ["E501"]
